@@ -1,0 +1,16 @@
+{
+    "name": "Immersion",
+    "version": "1.0",
+    "description": "Immerse in foreign languages",
+    "permissions": ["tabs",
+                    "http://*/*",
+                    "activeTab",
+                    "storage"],
+    "options_page": "options.html",
+    "content_scripts": [{
+        "css": ["immersioncss.css"],
+        "js": ["jquery.js", "immersionscript.js"],
+        "matches": ["<all_urls>"]
+    }],
+    "web_accessible_resources": ["immersionscript.js"]
+}
